@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 280 60" fill="none">
+  <!-- Circular Badge on Left -->
+  <g transform="translate(4, 5) scale(0.1)">
+    <!-- Outer Black -->
+    <circle cx="250" cy="250" r="236" fill="#0D1117" />
+    <!-- Outer Blue -->
+    <circle cx="250" cy="250" r="222" fill="#0B4F8A" />
+    <circle cx="250" cy="250" r="162" fill="none" stroke="#FFF7E2" stroke-width="8" />
+    <circle cx="250" cy="250" r="158" fill="#2DAFE8" />
+    <!-- 6-Point Star -->
+    <g transform="translate(250, 230)">
+      <polygon points="0,-108 24,-38 94,-54 46,4 94,62 24,46 0,116 -24,46 -94,62 -46,4 -94,-54 -24,-38" fill="#EE1C38" />
+    </g>
+    <!-- Mountains -->
+    <path d="M 120,330 L 165,295 L 185,315 L 235,270 L 250,290 L 285,255 L 320,305 L 350,285 L 380,330 A 158,158 0 0,1 120,330 Z" fill="#FFF0C8" />
+    <!-- Arched text simplified for small icon -->
+    <circle cx="250" cy="250" r="192" fill="none" stroke="#FFF7E2" stroke-width="2" stroke-dasharray="8,6" />
+  </g>
+
+  <!-- Wordmark -->
+  <text x="64" y="34" font-family="'Plus Jakarta Sans', system-ui, sans-serif" font-size="22" font-weight="900" letter-spacing="-0.03em" fill="#0D1117">
+    CHI<tspan fill="#EE1C38">ACTIVE</tspan>
+  </text>
+  <!-- Subtext with Chicago star & college city tag -->
+  <text x="66" y="47" font-family="system-ui, sans-serif" font-size="8.5" font-weight="700" letter-spacing="0.22em" fill="#0B4F8A">
+    CHICAGO &#9733; CAMPUS TECHWEAR
+  </text>
+</svg>

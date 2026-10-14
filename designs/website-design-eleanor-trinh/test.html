@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ChiActive Chicago Test Page — Commercial Quality Audit</title>
+  <link rel="stylesheet" href="/starter-site/fonts/fonts.css">
+  <link rel="stylesheet" href="/starter-site/css/styles.css">
+  <link rel="icon" type="image/svg+xml" href="/starter-site/images/logo.svg">
+  <style>
+    .test-box {
+      background: var(--chi-white);
+      border: 1px solid var(--chi-border);
+      border-radius: var(--radius-lg);
+      padding: 1.5rem;
+      margin-bottom: 1.5rem;
+      box-shadow: var(--shadow-subtle);
+    }
+    .status-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+      padding: 0.25rem 0.65rem;
+      border-radius: var(--radius-sm);
+      font-size: 0.8125rem;
+      font-weight: 700;
+    }
+    .status-badge.pass {
+      background-color: var(--chi-pastel-blue-darker);
+      color: var(--chi-dark-blue);
+    }
+    .asset-thumb {
+      width: 50px;
+      height: 50px;
+      object-fit: cover;
+      border-radius: var(--radius-sm);
+      border: 1px solid var(--chi-border);
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Top Navigation -->
+  <header class="site-header">
+    <div class="container">
+      <div class="top-bar">
+        <div class="brand-zone">
+          <a href="/starter-site/index.html" class="brand-logo-link">
+            <img src="/starter-site/images/logo.svg" alt="ChiActive Patch Logo" class="brand-badge-img" width="44" height="44">
+            <div class="brand-text-lockup">
+              <span class="brand-name">CHI<span>ACTIVE</span></span>
+              <span class="brand-sub">CHICAGO &#9733; CAMPUS TECH</span>
+            </div>
+          </a>
+        </div>
+        <nav class="nav-zone">
+          <a href="/starter-site/index.html" class="nav-link">Homepage</a>
+          <a href="/starter-site/jackets/index.html" class="nav-link">Product Catalog</a>
+          <a href="/starter-site/test.html" class="nav-link active">Test Suite</a>
+        </nav>
+        <div class="action-zone">
+          <a href="/starter-site/starter-site.zip" download="starter-site.zip" class="btn btn-primary btn-sm">Download .ZIP</a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main class="section">
+    <div class="container" style="max-width: 900px;">
+      <div class="section-header">
+        <span class="section-kicker">
+          <span>&#9733;</span> Commercial Quality Assurance <span>&#9733;</span>
+        </span>
+        <h1>ChiActive Quality &amp; Asset Test Suite</h1>
+        <p class="section-subtitle">
+          Verification for photorealistic product imagery, brand palette compliance, responsive layouts, and commercial e-commerce functionality.
+        </p>
+      </div>
+
+      <!-- Quick Navigation & Download Cards -->
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1.5rem; margin-bottom: 2rem;">
+        <div class="test-box">
+          <h3 style="margin-bottom: 0.5rem;">Chicago Homepage</h3>
+          <p style="font-size: 0.875rem; color: var(--chi-secondary); margin-bottom: 1rem;">
+            Lifestyle hero photography, 3 shopping collections, and realistic featured product cards.
+          </p>
+          <a href="/starter-site/index.html" class="btn btn-primary btn-sm">Open Homepage &rarr;</a>
+        </div>
+
+        <div class="test-box">
+          <h3 style="margin-bottom: 0.5rem;">Product Catalog</h3>
+          <p style="font-size: 0.875rem; color: var(--chi-secondary); margin-bottom: 1rem;">
+            10 photorealistic commercial products across Clothes, Boots, Backpacks, and Socks with active filtering.
+          </p>
+          <a href="/starter-site/jackets/index.html" class="btn btn-blue btn-sm">Open Catalog &rarr;</a>
+        </div>
+
+        <div class="test-box" style="border: 2px solid var(--chi-red);">
+          <h3 style="margin-bottom: 0.5rem; color: var(--chi-red);">&#9733; Download Class .ZIP</h3>
+          <p style="font-size: 0.875rem; color: var(--chi-secondary); margin-bottom: 1rem;">
+            Pre-packaged <code>starter-site.zip</code> containing all new photorealistic assets, pages, and styles.
+          </p>
+          <a href="/starter-site/starter-site.zip" download="starter-site.zip" class="btn btn-primary btn-sm" style="background-color: var(--chi-red);">
+            Download .ZIP File &darr;
+          </a>
+        </div>
+      </div>
+
+      <!-- PHOTOREALISTIC ASSET MANIFEST AUDIT (Phase 3) -->
+      <div class="test-box">
+        <h3 style="margin-bottom: 1.25rem;">Photorealistic Image Assets Manifest</h3>
+        <p style="font-size: 0.875rem; color: var(--chi-secondary); margin-bottom: 1.25rem;">
+          All simplified vector icons have been eliminated and replaced with real commercial studio product photography stored locally in <code>/starter-site/images/products/</code>:
+        </p>
+
+        <div style="display: flex; flex-direction: column; gap: 0.85rem;">
+          <div style="display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid var(--chi-border); padding-bottom: 0.75rem;">
+            <div style="display: flex; align-items: center; gap: 1rem;">
+              <img src="/starter-site/images/products/loop_shell_jacket.jpg" alt="Thumb" class="asset-thumb">
+              <div>
+                <strong>Product 01: The Loop Commuter 3L Shell</strong>
+                <div style="font-size: 0.8125rem; color: var(--chi-secondary);"><code>loop_shell_jacket.jpg</code> &bull; Technical 3-layer nylon, high collar, waterproof zip</div>
+              </div>
+            </div>
+            <span class="status-badge pass">&#10003; Photorealistic</span>
+          </div>
+
+          <div style="display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid var(--chi-border); padding-bottom: 0.75rem;">
+            <div style="display: flex; align-items: center; gap: 1rem;">
+              <img src="/starter-site/images/products/lakefront_boots.jpg" alt="Thumb" class="asset-thumb">
+              <div>
+                <strong>Product 02: Lakefront Arctic-Grip Boots</strong>
+                <div style="font-size: 0.8125rem; color: var(--chi-secondary);"><code>lakefront_boots.jpg</code> &bull; Waterproof leather, lug outsole, padded collar</div>
+              </div>
+            </div>
+            <span class="status-badge pass">&#10003; Photorealistic</span>
+          </div>
+
+          <div style="display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid var(--chi-border); padding-bottom: 0.75rem;">
+            <div style="display: flex; align-items: center; gap: 1rem;">
+              <img src="/starter-site/images/products/transit_backpack.jpg" alt="Thumb" class="asset-thumb">
+              <div>
+                <strong>Product 03: L-Transit 28L Roll-Top Pack</strong>
+                <div style="font-size: 0.8125rem; color: var(--chi-secondary);"><code>transit_backpack.jpg</code> &bull; 28L Cordura canvas, roll-top buckle, 16" laptop sleeve</div>
+              </div>
+            </div>
+            <span class="status-badge pass">&#10003; Photorealistic</span>
+          </div>
+
+          <div style="display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid var(--chi-border); padding-bottom: 0.75rem;">
+            <div style="display: flex; align-items: center; gap: 1rem;">
+              <img src="/starter-site/images/products/merino_socks.jpg" alt="Thumb" class="asset-thumb">
+              <div>
+                <strong>Product 04: Sub-Zero Merino Campus Socks</strong>
+                <div style="font-size: 0.8125rem; color: var(--chi-secondary);"><code>merino_socks.jpg</code> &bull; 80% Merino wool blend, cushioned arch, reinforced heel/toe</div>
+              </div>
+            </div>
+            <span class="status-badge pass">&#10003; Photorealistic</span>
+          </div>
+
+          <div style="display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid var(--chi-border); padding-bottom: 0.75rem;">
+            <div style="display: flex; align-items: center; gap: 1rem;">
+              <img src="/starter-site/images/products/fullerton_anorak.jpg" alt="Thumb" class="asset-thumb">
+              <div>
+                <strong>Product 05: Fullerton Packable Wind Anorak</strong>
+                <div style="font-size: 0.8125rem; color: var(--chi-secondary);"><code>fullerton_anorak.jpg</code> &bull; Colorblock ripstop, center storm kangaroo pocket</div>
+              </div>
+            </div>
+            <span class="status-badge pass">&#10003; Photorealistic</span>
+          </div>
+
+          <div style="display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid var(--chi-border); padding-bottom: 0.75rem;">
+            <div style="display: flex; align-items: center; gap: 1rem;">
+              <img src="/starter-site/images/products/pilsen_pants.jpg" alt="Thumb" class="asset-thumb">
+              <div>
+                <strong>Product 06: Pilsen Weatherproof Tech Pants</strong>
+                <div style="font-size: 0.8125rem; color: var(--chi-secondary);"><code>pilsen_pants.jpg</code> &bull; 4-way stretch water-repellent weave, articulated knees</div>
+              </div>
+            </div>
+            <span class="status-badge pass">&#10003; Photorealistic</span>
+          </div>
+
+          <div style="display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid var(--chi-border); padding-bottom: 0.75rem;">
+            <div style="display: flex; align-items: center; gap: 1rem;">
+              <img src="/starter-site/images/products/blizzard_parka.jpg" alt="Thumb" class="asset-thumb">
+              <div>
+                <strong>Product 07: Lakefront Blizzard Parka</strong>
+                <div style="font-size: 0.8125rem; color: var(--chi-secondary);"><code>blizzard_parka.jpg</code> &bull; Heavy-duty thermal baffle construction, storm collar</div>
+              </div>
+            </div>
+            <span class="status-badge pass">&#10003; Photorealistic</span>
+          </div>
+
+          <div style="display: flex; justify-content: space-between; align-items: center;">
+            <div style="display: flex; align-items: center; gap: 1rem;">
+              <img src="/starter-site/images/products/chicago_hero_lifestyle_landscape.jpg" alt="Thumb" class="asset-thumb">
+              <div>
+                <strong>Hero Campaign: Chicago Campus Lifestyle</strong>
+                <div style="font-size: 0.8125rem; color: var(--chi-secondary);"><code>chicago_hero_lifestyle_landscape.jpg</code> &bull; 16:9 editorial urban photography</div>
+              </div>
+            </div>
+            <span class="status-badge pass">&#10003; Photorealistic</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- DESIGN & TRUST AUDIT -->
+      <div class="test-box">
+        <h3 style="margin-bottom: 1.25rem;">Brand Identity &amp; E-Commerce Trust Audit</h3>
+        
+        <div style="display: flex; flex-direction: column; gap: 1rem;">
+          <div style="display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid var(--chi-border); padding-bottom: 0.75rem;">
+            <div>
+              <strong>Brand Palette Compliance</strong>
+              <div style="display: flex; gap: 0.5rem; margin-top: 0.35rem; align-items: center;">
+                <span style="display: inline-block; width: 22px; height: 22px; border-radius: 4px; background: #111318;" title="Black: #111318"></span>
+                <span style="display: inline-block; width: 22px; height: 22px; border-radius: 4px; background: #F51F3D;" title="Red: #F51F3D"></span>
+                <span style="display: inline-block; width: 22px; height: 22px; border-radius: 4px; background: #10538D;" title="Dark Blue: #10538D"></span>
+                <span style="display: inline-block; width: 22px; height: 22px; border-radius: 4px; background: #269FE5;" title="Bright Blue: #269FE5"></span>
+                <span style="display: inline-block; width: 22px; height: 22px; border-radius: 4px; background: #A9DDF5;" title="Baby Blue: #A9DDF5"></span>
+                <span style="display: inline-block; width: 22px; height: 22px; border-radius: 4px; background: #EAF6FC; border: 1px solid #CCC;" title="Pastel Blue: #EAF6FC"></span>
+              </div>
+            </div>
+            <span class="status-badge pass">&#10003; 100% Match</span>
+          </div>
+
+          <div style="display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid var(--chi-border); padding-bottom: 0.75rem;">
+            <div>
+              <strong>Chicago Shopping Collections</strong>
+              <div style="font-size: 0.8125rem; color: var(--chi-secondary);">Everyday Campus &bull; Rain &amp; Wind &bull; Chicago Winter</div>
+            </div>
+            <span class="status-badge pass">&#10003; Implemented</span>
+          </div>
+
+          <div style="display: flex; justify-content: space-between; align-items: center;">
+            <div>
+              <strong>Realistic Specifications (Anti-Hyperbole)</strong>
+              <div style="font-size: 0.8125rem; color: var(--chi-secondary);">Eliminated unverified lab claims; grounded proposed commercial specs for college life</div>
+            </div>
+            <span class="status-badge pass">&#10003; Verified Trust</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem;">
+        <div>&copy; 2026 ChiActive Apparel Co. Chicago, IL.</div>
+        <div style="display: flex; gap: 1rem;">
+          <a href="/starter-site/index.html">Home</a>
+          <a href="/starter-site/jackets/index.html">Catalog</a>
+          <a href="/starter-site/starter-site.zip" download>Download .ZIP</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

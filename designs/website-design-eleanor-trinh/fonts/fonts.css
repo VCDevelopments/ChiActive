@@ -1,0 +1,14 @@
+/* ChiActive Local & Web Font Definitions */
+@font-face {
+  font-family: 'ChiActive Sans';
+  src: local('Outfit'), local('Plus Jakarta Sans'), local('Inter'), local('system-ui');
+  font-weight: 400 800;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'ChiActive Display';
+  src: local('Outfit SemiBold'), local('Plus Jakarta Sans Bold'), local('system-ui');
+  font-weight: 700 800;
+  font-display: swap;
+}

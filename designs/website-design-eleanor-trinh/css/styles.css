@@ -1,0 +1,849 @@
+/* ==========================================================================
+   CHIACTIVE CHICAGO — COMMERCIAL OUTDOOR LIFESTYLE E-COMMERCE STYLESHEET
+   Brand Personality: Energetic, Minimalist, Functional, Weather-Ready
+   Audience: Chicago College Students (DePaul, Loyola, UIC, UChicago, Columbia, IIT)
+   Palette: Black (#111318), Brand Red (#F51F3D), Dark Blue (#10538D), 
+            Bright Blue (#269FE5), Baby Blue (#A9DDF5), Pastel Blue (#EAF6FC),
+            White (#FFFFFF), Secondary (#667789), Borders (#DCE6ED)
+   ========================================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&family=Space+Grotesk:wght@500;700&family=JetBrains+Mono:wght@400;500;700&display=swap');
+
+:root {
+  /* Brand Color Tokens per Phase 2 Specifications */
+  --chi-black: #111318;           /* Primary typography, selected apparel, premium details */
+  --chi-black-surface: #181C24;
+  --chi-red: #F51F3D;             /* Primary CTA buttons, logo details, active states */
+  --chi-red-hover: #D91430;
+  --chi-red-subtle: rgba(245, 31, 61, 0.08);
+  --chi-dark-blue: #10538D;       /* Technical details, navigation accents, selected products */
+  --chi-dark-blue-hover: #0B3F6D;
+  --chi-bright-blue: #269FE5;     /* Restrained highlights */
+  --chi-baby-blue: #A9DDF5;       /* Subtle accents */
+  --chi-pastel-blue: #EAF6FC;     /* Product-image backgrounds & informational sections */
+  --chi-pastel-blue-darker: #DCEDF8;
+  --chi-white: #FFFFFF;           /* Product cards & readable content */
+  --chi-secondary: #667789;       /* Secondary metadata & descriptions */
+  --chi-border: #DCE6ED;          /* Clean structural borders */
+  --chi-cream: #FFF8E7;           /* Logo typography accent */
+
+  /* Typography */
+  --font-display: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  --font-tech: 'Space Grotesk', system-ui, sans-serif;
+  --font-body: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+
+  /* Spacing & Radii */
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 12px;
+  --radius-xl: 16px;
+  --radius-full: 9999px;
+
+  /* Shadows */
+  --shadow-subtle: 0 1px 3px rgba(17, 19, 24, 0.06);
+  --shadow-card: 0 4px 16px -2px rgba(16, 83, 141, 0.08), 0 2px 6px -1px rgba(17, 19, 24, 0.04);
+  --shadow-hover: 0 14px 30px -4px rgba(16, 83, 141, 0.14), 0 4px 10px -2px rgba(245, 31, 61, 0.08);
+
+  /* Transitions */
+  --transition-fast: 160ms cubic-bezier(0.16, 1, 0.3, 1);
+  --transition-smooth: 240ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Reset */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-family: var(--font-body);
+  color: var(--chi-black);
+  background-color: var(--chi-pastel-blue);
+  -webkit-font-smoothing: antialiased;
+  line-height: 1.6;
+  scroll-behavior: smooth;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Typography Hierarchy */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-display);
+  font-weight: 800;
+  line-height: 1.15;
+  color: var(--chi-black);
+  letter-spacing: -0.025em;
+  text-wrap: balance;
+}
+
+h1 { font-size: clamp(2.25rem, 4.5vw, 3.75rem); font-weight: 900; }
+h2 { font-size: clamp(1.75rem, 3.2vw, 2.5rem); }
+h3 { font-size: clamp(1.15rem, 1.8vw, 1.35rem); font-weight: 800; }
+
+p {
+  color: var(--chi-secondary);
+  max-width: 68ch;
+  font-size: 0.95rem;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  transition: all var(--transition-fast);
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+/* Container Constraint */
+.container {
+  width: 100%;
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+@media (min-width: 768px) {
+  .container {
+    padding: 0 2.5rem;
+  }
+}
+
+/* Chicago College Student Ticker */
+.campus-ticker {
+  background-color: var(--chi-black);
+  color: var(--chi-white);
+  padding: 0.5rem 1rem;
+  font-size: 0.78125rem;
+  font-weight: 600;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.75rem;
+  letter-spacing: 0.03em;
+}
+
+.campus-ticker span.star {
+  color: var(--chi-red);
+  font-size: 0.95rem;
+}
+
+.campus-ticker strong {
+  color: var(--chi-baby-blue);
+}
+
+/* TOP BAR (Anti-Slop 3-Zone Contract) */
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background-color: rgba(255, 255, 255, 0.96);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--chi-border);
+}
+
+.top-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 74px;
+}
+
+/* Zone 1: Authentic Brand Patch Logo & Wordmark */
+.brand-zone {
+  display: flex;
+  align-items: center;
+}
+
+.brand-logo-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.85rem;
+}
+
+.brand-badge-img {
+  width: 44px;
+  height: 44px;
+  object-fit: contain;
+  transition: transform var(--transition-fast);
+}
+
+.brand-logo-link:hover .brand-badge-img {
+  transform: rotate(-3deg) scale(1.05);
+}
+
+.brand-text-lockup {
+  display: flex;
+  flex-direction: column;
+}
+
+.brand-name {
+  font-family: var(--font-display);
+  font-size: 1.4rem;
+  font-weight: 900;
+  letter-spacing: -0.03em;
+  color: var(--chi-black);
+  line-height: 1;
+}
+
+.brand-name span {
+  color: var(--chi-red);
+}
+
+.brand-sub {
+  font-size: 0.65rem;
+  font-weight: 800;
+  letter-spacing: 0.2em;
+  color: var(--chi-dark-blue);
+  text-transform: uppercase;
+  margin-top: 2px;
+}
+
+/* Zone 2: Navigation Links */
+.nav-zone {
+  display: none;
+  align-items: center;
+  gap: 2rem;
+}
+
+@media (min-width: 900px) {
+  .nav-zone {
+    display: flex;
+  }
+}
+
+.nav-link {
+  font-size: 0.9375rem;
+  font-weight: 700;
+  color: var(--chi-secondary);
+  position: relative;
+  padding: 0.5rem 0;
+  white-space: nowrap;
+}
+
+.nav-link:hover,
+.nav-link.active {
+  color: var(--chi-black);
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: var(--chi-red);
+  transition: width var(--transition-fast);
+}
+
+.nav-link:hover::after,
+.nav-link.active::after {
+  width: 100%;
+}
+
+/* Zone 3: Actions */
+.action-zone {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+/* Buttons */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  font-family: var(--font-body);
+  font-size: 0.9375rem;
+  font-weight: 700;
+  line-height: 1;
+  padding: 0.75rem 1.35rem;
+  border-radius: var(--radius-md);
+  border: 1px solid transparent;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: all var(--transition-fast);
+  text-decoration: none;
+}
+
+.btn-primary {
+  background-color: var(--chi-red);
+  color: var(--chi-white);
+}
+
+.btn-primary:hover {
+  background-color: var(--chi-red-hover);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(245, 31, 61, 0.25);
+}
+
+.btn-blue {
+  background-color: var(--chi-dark-blue);
+  color: var(--chi-white);
+}
+
+.btn-blue:hover {
+  background-color: var(--chi-dark-blue-hover);
+  transform: translateY(-1px);
+}
+
+.btn-black {
+  background-color: var(--chi-black);
+  color: var(--chi-white);
+}
+
+.btn-black:hover {
+  background-color: #232731;
+}
+
+.btn-outline {
+  background-color: transparent;
+  border-color: var(--chi-dark-blue);
+  color: var(--chi-dark-blue);
+}
+
+.btn-outline:hover {
+  background-color: var(--chi-dark-blue);
+  color: var(--chi-white);
+}
+
+.btn-ghost {
+  background-color: transparent;
+  color: var(--chi-black);
+  padding: 0.5rem 0.75rem;
+}
+
+.btn-ghost:hover {
+  background-color: rgba(17, 19, 24, 0.05);
+}
+
+.btn-sm {
+  padding: 0.55rem 0.95rem;
+  font-size: 0.8125rem;
+}
+
+/* HERO SECTION (Realistic Editorial Lifestyle Photography) */
+.hero {
+  position: relative;
+  background-color: var(--chi-white);
+  border-bottom: 1px solid var(--chi-border);
+  padding: 4.5rem 0 5.5rem;
+  overflow: hidden;
+}
+
+.hero-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 3.5rem;
+  align-items: center;
+  position: relative;
+  z-index: 2;
+}
+
+@media (min-width: 992px) {
+  .hero-grid {
+    grid-template-columns: 1.15fr 0.85fr;
+  }
+}
+
+.hero-kicker-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.8125rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--chi-dark-blue);
+  background-color: var(--chi-pastel-blue);
+  border: 1px solid var(--chi-border);
+  padding: 0.35rem 0.85rem;
+  border-radius: var(--radius-full);
+  margin-bottom: 1.25rem;
+}
+
+.hero-kicker-tag .red-dot {
+  width: 8px;
+  height: 8px;
+  background-color: var(--chi-red);
+  border-radius: 50%;
+}
+
+.hero-title {
+  color: var(--chi-black);
+  margin-bottom: 1.25rem;
+  letter-spacing: -0.035em;
+}
+
+.hero-title span.blue-highlight {
+  color: var(--chi-dark-blue);
+}
+
+.hero-title span.red-highlight {
+  color: var(--chi-red);
+}
+
+.hero-lead {
+  font-size: 1.125rem;
+  color: var(--chi-secondary);
+  line-height: 1.6;
+  margin-bottom: 2rem;
+}
+
+.hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  align-items: center;
+}
+
+/* Hero Lifestyle Banner Card */
+.hero-lifestyle-card {
+  position: relative;
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+  box-shadow: var(--shadow-card);
+  border: 1px solid var(--chi-border);
+  background-color: var(--chi-pastel-blue);
+}
+
+.hero-lifestyle-img {
+  width: 100%;
+  aspect-ratio: 4/3;
+  object-fit: cover;
+  display: block;
+}
+
+.hero-lifestyle-caption {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(to top, rgba(17, 19, 24, 0.92) 0%, rgba(17, 19, 24, 0.6) 60%, transparent 100%);
+  color: #FFFFFF;
+  padding: 1.5rem 1.5rem 1.25rem;
+}
+
+/* Campus Trust Points */
+.hero-campus-specs {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  margin-top: 2.75rem;
+  padding-top: 2rem;
+  border-top: 1px solid var(--chi-border);
+}
+
+.campus-spec-item {
+  display: flex;
+  flex-direction: column;
+}
+
+.campus-spec-val {
+  font-family: var(--font-tech);
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: var(--chi-black);
+  font-variant-numeric: tabular-nums;
+}
+
+.campus-spec-label {
+  font-size: 0.8125rem;
+  color: var(--chi-secondary);
+  margin-top: 0.25rem;
+}
+
+/* SECTION COMMONS */
+.section {
+  padding: 4.5rem 0;
+}
+
+.section-header {
+  margin-bottom: 2.75rem;
+}
+
+.section-kicker {
+  font-size: 0.75rem;
+  font-weight: 800;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--chi-red);
+  margin-bottom: 0.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.section-title {
+  margin-bottom: 0.75rem;
+}
+
+.section-subtitle {
+  color: var(--chi-secondary);
+  font-size: 1.0625rem;
+}
+
+/* 3 CHICAGO SHOPPING COLLECTIONS (Phase 5) */
+.collections-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 2rem;
+  margin-bottom: 3.5rem;
+}
+
+.collection-card {
+  background-color: var(--chi-white);
+  border: 1px solid var(--chi-border);
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+  box-shadow: var(--shadow-card);
+  transition: transform var(--transition-smooth), box-shadow var(--transition-smooth), border-color var(--transition-smooth);
+  display: flex;
+  flex-direction: column;
+}
+
+.collection-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-hover);
+  border-color: var(--chi-bright-blue);
+}
+
+.collection-img-wrap {
+  width: 100%;
+  aspect-ratio: 16/9;
+  background-color: var(--chi-pastel-blue);
+  overflow: hidden;
+  position: relative;
+}
+
+.collection-img-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform var(--transition-smooth);
+}
+
+.collection-card:hover .collection-img-wrap img {
+  transform: scale(1.05);
+}
+
+.collection-body {
+  padding: 1.75rem;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.collection-kicker {
+  font-size: 0.75rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--chi-dark-blue);
+  margin-bottom: 0.5rem;
+}
+
+.collection-title {
+  font-size: 1.35rem;
+  font-weight: 800;
+  color: var(--chi-black);
+  margin-bottom: 0.65rem;
+}
+
+.collection-desc {
+  font-size: 0.9375rem;
+  color: var(--chi-secondary);
+  line-height: 1.55;
+  margin-bottom: 1.25rem;
+}
+
+/* PRODUCT CARD (Phase 6 Rebuild with Photorealistic Images) */
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(290px, 1fr));
+  gap: 2rem;
+}
+
+@media (min-width: 1024px) {
+  .product-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.product-card {
+  background-color: var(--chi-white);
+  border: 1px solid var(--chi-border);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: transform var(--transition-smooth), box-shadow var(--transition-smooth), border-color var(--transition-smooth);
+}
+
+.product-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-hover);
+  border-color: var(--chi-bright-blue);
+}
+
+/* Photorealistic Image Container */
+.product-image-wrap {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 4/3;
+  background-color: var(--chi-pastel-blue);
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.product-photo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform var(--transition-smooth);
+}
+
+.product-card:hover .product-photo {
+  transform: scale(1.05);
+}
+
+.product-badge-flag {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  background-color: var(--chi-black);
+  color: #FFFFFF;
+  font-size: 0.6875rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 0.35rem 0.65rem;
+  border-radius: var(--radius-sm);
+  z-index: 2;
+}
+
+.product-badge-flag.red { background-color: var(--chi-red); }
+.product-badge-flag.blue { background-color: var(--chi-dark-blue); }
+
+/* Product Body & Metadata */
+.product-body {
+  padding: 1.65rem;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.product-metadata {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: var(--chi-dark-blue);
+  margin-bottom: 0.5rem;
+}
+
+.product-metadata-separator {
+  color: var(--chi-border);
+}
+
+.product-title {
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: var(--chi-black);
+  margin-bottom: 0.5rem;
+  line-height: 1.25;
+}
+
+.product-desc {
+  font-size: 0.875rem;
+  color: var(--chi-secondary);
+  line-height: 1.5;
+  margin-bottom: 1.25rem;
+}
+
+/* Practical Key Features */
+.product-specs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  padding: 0.75rem 0;
+  border-top: 1px solid var(--chi-border);
+  border-bottom: 1px solid var(--chi-border);
+  margin-bottom: 1.25rem;
+  font-size: 0.75rem;
+  color: var(--chi-black);
+}
+
+.product-spec-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  font-weight: 600;
+}
+
+.product-spec-item svg {
+  width: 14px;
+  height: 14px;
+  color: var(--chi-red);
+}
+
+/* Tactile Color Swatches */
+.swatch-group {
+  display: flex;
+  gap: 0.4rem;
+  margin-bottom: 0.75rem;
+}
+
+.swatch-dot {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  border: 1px solid rgba(0,0,0,0.15);
+  cursor: pointer;
+  position: relative;
+  transition: transform var(--transition-fast);
+}
+
+.swatch-dot.active::after {
+  content: '';
+  position: absolute;
+  inset: -3px;
+  border: 1.5px solid var(--chi-red);
+  border-radius: 50%;
+}
+
+.product-footer {
+  margin-top: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.product-price {
+  font-family: var(--font-tech);
+  font-size: 1.4rem;
+  font-weight: 800;
+  color: var(--chi-black);
+  font-variant-numeric: tabular-nums;
+}
+
+/* Filter Controls */
+.filter-bar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem;
+  background-color: var(--chi-white);
+  border: 1px solid var(--chi-border);
+  border-radius: var(--radius-lg);
+  margin-bottom: 2.5rem;
+}
+
+.filter-btn {
+  padding: 0.55rem 1.15rem;
+  font-size: 0.875rem;
+  font-weight: 700;
+  border-radius: var(--radius-md);
+  border: none;
+  background: transparent;
+  color: var(--chi-secondary);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.filter-btn:hover {
+  color: var(--chi-black);
+  background-color: var(--chi-pastel-blue);
+}
+
+.filter-btn.active {
+  background-color: var(--chi-black);
+  color: #FFFFFF;
+}
+
+/* FOOTER */
+.site-footer {
+  background-color: var(--chi-black);
+  color: #8C9CAE;
+  margin-top: auto;
+  padding: 4.5rem 0 2rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 3rem;
+  margin-bottom: 3.5rem;
+}
+
+@media (min-width: 768px) {
+  .footer-grid {
+    grid-template-columns: 1.5fr repeat(3, 1fr);
+  }
+}
+
+.footer-brand-title {
+  color: #FFFFFF;
+  margin-bottom: 1rem;
+}
+
+.footer-desc {
+  color: #8C9CAE;
+  font-size: 0.9375rem;
+  margin-bottom: 1.5rem;
+}
+
+.footer-col-title {
+  font-size: 0.8125rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: #FFFFFF;
+  margin-bottom: 1.25rem;
+}
+
+.footer-link-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.footer-link-list a {
+  font-size: 0.9375rem;
+  color: #8C9CAE;
+  transition: color var(--transition-fast);
+}
+
+.footer-link-list a:hover {
+  color: var(--chi-bright-blue);
+}
+
+.footer-bottom {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  padding-top: 2rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  font-size: 0.8125rem;
+  color: #617387;
+}

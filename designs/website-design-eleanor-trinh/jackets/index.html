@@ -1,0 +1,636 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chicago Student Outdoor Gear &amp; Apparel Catalog — ChiActive</title>
+  <meta name="description" content="Realistic technical outerwear, winter boots, transit backpacks, and thermal merino socks designed for Chicago college students.">
+  <link rel="stylesheet" href="/starter-site/fonts/fonts.css">
+  <link rel="stylesheet" href="/starter-site/css/styles.css">
+  <link rel="icon" type="image/svg+xml" href="/starter-site/images/logo.svg">
+</head>
+<body>
+
+  <!-- Campus Ticker -->
+  <aside class="campus-ticker" aria-label="Student Announcement">
+    <span class="star">&#9733;</span>
+    <span><strong>CHICAGO STUDENT PASS:</strong> 20% OFF WITH .EDU EMAIL &bull; USE CODE: <strong>CHICOLLEGE20</strong></span>
+    <span class="star">&#9733;</span>
+    <span>VENTRA® RFID TRANSIT TAP COMPATIBLE</span>
+    <span class="star">&#9733;</span>
+  </aside>
+
+  <!-- Top Navigation (3-Zone Contract) -->
+  <header class="site-header">
+    <div class="container">
+      <div class="top-bar">
+        <!-- Zone 1: Authentic Circular Patch Logo & Wordmark -->
+        <div class="brand-zone">
+          <a href="/starter-site/index.html" class="brand-logo-link" aria-label="ChiActive Home">
+            <img src="/starter-site/images/logo.svg" alt="ChiActive Chicago Patch Logo" class="brand-badge-img" width="44" height="44">
+            <div class="brand-text-lockup">
+              <span class="brand-name">CHI<span>ACTIVE</span></span>
+              <span class="brand-sub">CHICAGO &#9733; CAMPUS TECH</span>
+            </div>
+          </a>
+        </div>
+
+        <!-- Zone 2: Navigation Links -->
+        <nav class="nav-zone" aria-label="Primary Navigation">
+          <a href="/starter-site/index.html" class="nav-link">Home</a>
+          <a href="/starter-site/jackets/index.html" class="nav-link active">All Products</a>
+          <a href="#clothes" class="nav-link">Clothes</a>
+          <a href="#shoes" class="nav-link">Footwear</a>
+          <a href="#backpacks" class="nav-link">Bags</a>
+          <a href="#socks" class="nav-link">Socks</a>
+          <a href="/starter-site/test.html" class="nav-link">Test Page</a>
+        </nav>
+
+        <!-- Zone 3: Primary Actions -->
+        <div class="action-zone">
+          <a href="/starter-site/starter-site.zip" download class="btn btn-primary btn-sm">Download .ZIP</a>
+          <button type="button" class="btn btn-ghost btn-sm" aria-label="Cart" onclick="alert('Your gear pack is empty.')">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z"/><path d="M3 6h18"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+            <span style="font-weight: 800; font-size: 0.8125rem;">(0)</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main class="section">
+    <div class="container">
+      <!-- Breadcrumb -->
+      <nav aria-label="Breadcrumb" style="font-size: 0.8125rem; color: var(--chi-secondary); margin-bottom: 1.5rem; display: flex; gap: 0.5rem; align-items: center;">
+        <a href="/starter-site/index.html" style="color: var(--chi-dark-blue); font-weight: 700;">Chicago Home</a>
+        <span>/</span>
+        <span style="color: var(--chi-black); font-weight: 800;">Outdoor Gear Catalog</span>
+      </nav>
+
+      <!-- Category Intro Header -->
+      <div class="section-header" style="max-width: 820px;">
+        <span class="section-kicker">
+          <span>&#9733;</span> Commercial Product Catalog <span>&#9733;</span>
+        </span>
+        <h1 style="margin-bottom: 0.75rem;">Chicago Campus Equipment &amp; Apparel</h1>
+        <p class="section-subtitle">
+          Commercial-grade outdoor apparel and equipment designed for Chicago students. Technical 3-layer shells, traction footwear, weather-resistant roll-top backpacks, and thermal merino socks.
+        </p>
+      </div>
+
+      <!-- Interactive Multi-Category Filter Bar -->
+      <div class="filter-bar" role="tablist" aria-label="Filter outdoor gear by category">
+        <button type="button" class="filter-btn active" data-filter="all">All Products (10)</button>
+        <button type="button" class="filter-btn" data-filter="clothes">&#128085; Clothes &amp; Jackets (4)</button>
+        <button type="button" class="filter-btn" data-filter="shoes">&#129342; Boots &amp; Shoes (2)</button>
+        <button type="button" class="filter-btn" data-filter="backpacks">&#127890; Backpacks &amp; Bags (2)</button>
+        <button type="button" class="filter-btn" data-filter="socks">&#129506; Socks &amp; Accessories (2)</button>
+      </div>
+
+      <!-- Outdoor Gear Grid -->
+      <div class="product-grid" id="gear-grid">
+
+        <!-- ===================================================================
+             PRODUCT 01: THE LOOP COMMUTER 3L SHELL (Photorealistic)
+             =================================================================== -->
+        <article class="product-card" data-category="clothes" style="border: 2px solid var(--chi-black); box-shadow: var(--shadow-card);">
+          <div class="product-image-wrap">
+            <span class="product-badge-flag red">&#9733; Upgraded Product 01</span>
+            <img src="/starter-site/images/products/loop_shell_jacket.jpg" alt="The Loop Commuter 3L Shell technical jacket in matte black with red accents" class="product-photo" loading="lazy">
+          </div>
+          <div class="product-body" style="padding: 1.75rem;">
+            <div class="product-metadata">
+              <span style="color: var(--chi-red); font-weight: 800;">Technical Outerwear</span>
+              <span class="product-metadata-separator">/</span>
+              <span>3-Layer Shell</span>
+              <span class="product-metadata-separator">/</span>
+              <span>410g</span>
+            </div>
+            <h3 class="product-title">
+              <a href="#">The Loop Commuter 3L Shell</a>
+            </h3>
+            <p class="product-desc">
+              Three-layer technical nylon shell with waterproof center zipper, high protective collar, adjustable hood with structured brim, and wrist transit card pocket.
+            </p>
+            <div class="swatch-group">
+              <button type="button" class="swatch-dot active" style="background-color: #111318;" title="Matte Obsidian"></button>
+              <button type="button" class="swatch-dot" style="background-color: #10538D;" title="Dark Blue"></button>
+              <button type="button" class="swatch-dot" style="background-color: #A9DDF5;" title="Baby Blue"></button>
+            </div>
+            <div class="product-specs" style="padding: 0.75rem 0; margin-bottom: 1.5rem;">
+              <span class="product-spec-item">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                Ventra® RFID Wrist Tap
+              </span>
+              <span class="product-spec-item">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="m5 12 5 5L20 7"/></svg>
+                Taped Weatherproof Seams
+              </span>
+              <span class="product-spec-item">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="m5 12 5 5L20 7"/></svg>
+                Storm Collar with Brim
+              </span>
+            </div>
+            <div class="product-footer">
+              <div style="display: flex; flex-direction: column;">
+                <span class="product-price" style="font-size: 1.55rem; color: var(--chi-black);">$225.00</span>
+                <span style="font-size: 0.75rem; color: var(--chi-red); font-weight: 700;">$180.00 with .EDU discount</span>
+              </div>
+              <button type="button" class="btn btn-primary" onclick="alert('The Loop Commuter 3L Shell added to your cart!')">
+                Add to Cart
+              </button>
+            </div>
+          </div>
+        </article>
+
+        <!-- ===================================================================
+             PRODUCT 02: LAKEFRONT ARCTIC-GRIP BOOTS (Photorealistic)
+             =================================================================== -->
+        <article class="product-card" data-category="shoes">
+          <div class="product-image-wrap">
+            <span class="product-badge-flag blue">&#9733; Upgraded Product 02</span>
+            <img src="/starter-site/images/products/lakefront_boots.jpg" alt="Lakefront Arctic-Grip Boots in waterproof leather with deep lug sole" class="product-photo" loading="lazy">
+          </div>
+          <div class="product-body">
+            <div class="product-metadata">
+              <span>Winter Footwear</span>
+              <span class="product-metadata-separator">/</span>
+              <span>Lug Outsole</span>
+              <span class="product-metadata-separator">/</span>
+              <span>Salt-Proof</span>
+            </div>
+            <h3 class="product-title">
+              <a href="#">Lakefront Arctic-Grip Boots</a>
+            </h3>
+            <p class="product-desc">
+              Insulated winter boot with waterproof nubuck leather, padded collar, protective toe cap, and high-traction rubber lug tread for wet ice and slush.
+            </p>
+            <div class="swatch-group">
+              <span class="swatch-dot active" style="background-color: #111318;" title="Black"></span>
+              <span class="swatch-dot" style="background-color: #10538D;" title="Dark Blue"></span>
+            </div>
+            <div class="product-specs">
+              <span class="product-spec-item">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="m5 12 5 5L20 7"/></svg>
+                Rubber Lug Outsole
+              </span>
+              <span class="product-spec-item">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="m5 12 5 5L20 7"/></svg>
+                Padded Ankle Collar
+              </span>
+            </div>
+            <div class="product-footer">
+              <span class="product-price">$185.00</span>
+              <button type="button" class="btn btn-blue btn-sm" onclick="alert('Lakefront Boots added to your cart!')">Add to Cart</button>
+            </div>
+          </div>
+        </article>
+
+        <!-- ===================================================================
+             PRODUCT 03: L-TRANSIT 28L ROLL-TOP PACK (Photorealistic)
+             =================================================================== -->
+        <article class="product-card" data-category="backpacks">
+          <div class="product-image-wrap">
+            <span class="product-badge-flag red">&#9733; Upgraded Product 03</span>
+            <img src="/starter-site/images/products/transit_backpack.jpg" alt="L-Transit 28L Roll-Top Pack in black water-resistant canvas" class="product-photo" loading="lazy">
+          </div>
+          <div class="product-body">
+            <div class="product-metadata">
+              <span>Campus Backpack</span>
+              <span class="product-metadata-separator">/</span>
+              <span>28-Liter Volume</span>
+              <span class="product-metadata-separator">/</span>
+              <span>Laptop Vault</span>
+            </div>
+            <h3 class="product-title">
+              <a href="#">L-Transit 28L Roll-Top Pack</a>
+            </h3>
+            <p class="product-desc">
+              Structured water-resistant roll-top pack with webbed buckle closure, padded 16" laptop sleeve, side water bottle sleeve, and ergonomic straps.
+            </p>
+            <div class="swatch-group">
+              <span class="swatch-dot active" style="background-color: #111318;" title="Black"></span>
+              <span class="swatch-dot" style="background-color: #10538D;" title="Dark Blue"></span>
+              <span class="swatch-dot" style="background-color: #667789;" title="Gray"></span>
+            </div>
+            <div class="product-specs">
+              <span class="product-spec-item">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="m5 12 5 5L20 7"/></svg>
+                Padded 16" Laptop Sleeve
+              </span>
+              <span class="product-spec-item">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="m5 12 5 5L20 7"/></svg>
+                Ergonomic Shoulder Straps
+              </span>
+            </div>
+            <div class="product-footer">
+              <span class="product-price">$135.00</span>
+              <button type="button" class="btn btn-black btn-sm" onclick="alert('L-Transit Backpack added to your cart!')">Add to Cart</button>
+            </div>
+          </div>
+        </article>
+
+        <!-- ===================================================================
+             PRODUCT 04: SUB-ZERO MERINO CAMPUS SOCKS (Photorealistic)
+             =================================================================== -->
+        <article class="product-card" data-category="socks">
+          <div class="product-image-wrap">
+            <span class="product-badge-flag blue">&#9733; Thermal Socks</span>
+            <img src="/starter-site/images/products/merino_socks.jpg" alt="Sub-Zero Merino Campus Socks in charcoal knit" class="product-photo" loading="lazy">
+          </div>
+          <div class="product-body">
+            <div class="product-metadata">
+              <span>Socks &bull; 3-Pack</span>
+              <span class="product-metadata-separator">/</span>
+              <span>80% Merino Wool</span>
+              <span class="product-metadata-separator">/</span>
+              <span>Cushioned Arch</span>
+            </div>
+            <h3 class="product-title">
+              <a href="#">Sub-Zero Merino Campus Socks (3-Pack)</a>
+            </h3>
+            <p class="product-desc">
+              Dense merino wool blend crew socks with arch compression, reinforced heel and toe, and rapid moisture-wicking cushioning for heavy winter boots.
+            </p>
+            <div class="swatch-group">
+              <span class="swatch-dot active" style="background-color: #111318;"></span>
+              <span class="swatch-dot" style="background-color: #269FE5;"></span>
+              <span class="swatch-dot" style="background-color: #EAF6FC;"></span>
+            </div>
+            <div class="product-specs">
+              <span class="product-spec-item">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="m5 12 5 5L20 7"/></svg>
+                Reinforced Heel &amp; Toe
+              </span>
+              <span class="product-spec-item">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="m5 12 5 5L20 7"/></svg>
+                Anti-Odor Merino Fiber
+              </span>
+            </div>
+            <div class="product-footer">
+              <span class="product-price">$38.00</span>
+              <button type="button" class="btn btn-primary btn-sm" onclick="alert('Merino Socks added to your cart!')">Add to Cart</button>
+            </div>
+          </div>
+        </article>
+
+        <!-- ===================================================================
+             PRODUCT 05: FULLERTON PACKABLE WIND ANORAK (Photorealistic)
+             =================================================================== -->
+        <article class="product-card" data-category="clothes">
+          <div class="product-image-wrap">
+            <span class="product-badge-flag">&#9733; Windbreaker</span>
+            <img src="/starter-site/images/products/fullerton_anorak.jpg" alt="Fullerton Packable Wind Anorak in pastel blue and black" class="product-photo" loading="lazy">
+          </div>
+          <div class="product-body">
+            <div class="product-metadata">
+              <span>Lightweight Outerwear</span>
+              <span class="product-metadata-separator">/</span>
+              <span>Ripstop Nylon</span>
+              <span class="product-metadata-separator">/</span>
+              <span>Packable</span>
+            </div>
+            <h3 class="product-title">
+              <a href="#">Fullerton Packable Wind Anorak</a>
+            </h3>
+            <p class="product-desc">
+              Colorblocked pastel blue and black half-zip pullover with center storm kangaroo pocket and packable self-stow pouch for unpredictable lake breezes.
+            </p>
+            <div class="swatch-group">
+              <span class="swatch-dot active" style="background-color: #A9DDF5;"></span>
+              <span class="swatch-dot" style="background-color: #111318;"></span>
+            </div>
+            <div class="product-specs">
+              <span class="product-spec-item">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="m5 12 5 5L20 7"/></svg>
+                Wind-Deflecting Ripstop
+              </span>
+              <span class="product-spec-item">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="m5 12 5 5L20 7"/></svg>
+                Self-Packing Pouch
+              </span>
+            </div>
+            <div class="product-footer">
+              <span class="product-price">$140.00</span>
+              <button type="button" class="btn btn-black btn-sm" onclick="alert('Fullerton Anorak added to your cart!')">Add to Cart</button>
+            </div>
+          </div>
+        </article>
+
+        <!-- ===================================================================
+             PRODUCT 06: PILSEN WEATHERPROOF TECH PANTS (Photorealistic)
+             =================================================================== -->
+        <article class="product-card" data-category="clothes">
+          <div class="product-image-wrap">
+            <span class="product-badge-flag blue">Utility Pants</span>
+            <img src="/starter-site/images/products/pilsen_pants.jpg" alt="Pilsen Weatherproof Tech Pants in matte black" class="product-photo" loading="lazy">
+          </div>
+          <div class="product-body">
+            <div class="product-metadata">
+              <span>Campus Bottoms</span>
+              <span class="product-metadata-separator">/</span>
+              <span>4-Way Stretch</span>
+              <span class="product-metadata-separator">/</span>
+              <span>Water-Repellent</span>
+            </div>
+            <h3 class="product-title">
+              <a href="#">Pilsen Weatherproof Tech Pants</a>
+            </h3>
+            <p class="product-desc">
+              Relaxed-taper outdoor trousers with water-resistant surface treatment, articulated knees, and discreet zippered security pocket for city commuting.
+            </p>
+            <div class="swatch-group">
+              <span class="swatch-dot active" style="background-color: #111318;"></span>
+              <span class="swatch-dot" style="background-color: #10538D;"></span>
+            </div>
+            <div class="product-specs">
+              <span class="product-spec-item">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="m5 12 5 5L20 7"/></svg>
+                Slush &amp; Splash Barrier
+              </span>
+              <span class="product-spec-item">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="m5 12 5 5L20 7"/></svg>
+                Zippered Security Pocket
+              </span>
+            </div>
+            <div class="product-footer">
+              <span class="product-price">$115.00</span>
+              <button type="button" class="btn btn-blue btn-sm" onclick="alert('Pilsen Pants added to your cart!')">Add to Cart</button>
+            </div>
+          </div>
+        </article>
+
+        <!-- ===================================================================
+             PRODUCT 07: LAKEFRONT BLIZZARD PARKA (Photorealistic)
+             =================================================================== -->
+        <article class="product-card" data-category="clothes">
+          <div class="product-image-wrap">
+            <span class="product-badge-flag red">&#9733; Deep Freeze</span>
+            <img src="/starter-site/images/products/blizzard_parka.jpg" alt="Lakefront Blizzard Parka in deep navy with insulated hood" class="product-photo" loading="lazy">
+          </div>
+          <div class="product-body">
+            <div class="product-metadata">
+              <span>Severe Cold Outerwear</span>
+              <span class="product-metadata-separator">/</span>
+              <span>Thermal Baffles</span>
+              <span class="product-metadata-separator">/</span>
+              <span>Thigh Length</span>
+            </div>
+            <h3 class="product-title">
+              <a href="#">Lakefront Blizzard Parka</a>
+            </h3>
+            <p class="product-desc">
+              Heavy-duty winter parka with insulated baffle structure, high storm collar, extended length coverage, and dual-direction front zipper for sub-zero winds.
+            </p>
+            <div class="swatch-group">
+              <span class="swatch-dot active" style="background-color: #10538D;"></span>
+              <span class="swatch-dot" style="background-color: #111318;"></span>
+              <span class="swatch-dot" style="background-color: #EAF6FC;"></span>
+            </div>
+            <div class="product-specs">
+              <span class="product-spec-item">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="m5 12 5 5L20 7"/></svg>
+                High-Loft Thermal Insulation
+              </span>
+              <span class="product-spec-item">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="m5 12 5 5L20 7"/></svg>
+                Fleece-Lined Storm Pockets
+              </span>
+            </div>
+            <div class="product-footer">
+              <span class="product-price">$280.00</span>
+              <button type="button" class="btn btn-primary btn-sm" onclick="alert('Lakefront Parka added to your cart!')">Add to Cart</button>
+            </div>
+          </div>
+        </article>
+
+        <!-- ===================================================================
+             PRODUCT 08: CAMPUS ALL-WEATHER COMMUTER SNEAKERS (Photorealistic)
+             =================================================================== -->
+        <article class="product-card" data-category="shoes">
+          <div class="product-image-wrap">
+            <span class="product-badge-flag">Commuter</span>
+            <img src="/starter-site/images/products/commuter_sneakers.jpg" alt="Campus All-Weather Commuter Sneakers in black with red detail" class="product-photo" loading="lazy">
+          </div>
+          <div class="product-body">
+            <div class="product-metadata">
+              <span>Everyday Footwear</span>
+              <span class="product-metadata-separator">/</span>
+              <span>Waterproof Knit</span>
+              <span class="product-metadata-separator">/</span>
+              <span>Cushioned EVA</span>
+            </div>
+            <h3 class="product-title">
+              <a href="#">Campus All-Weather Sneaker</a>
+            </h3>
+            <p class="product-desc">
+              Low-profile commuter runner with water-repellent micro-knit upper and high-traction rubber outsole designed for brisk walking between campus buildings.
+            </p>
+            <div class="swatch-group">
+              <span class="swatch-dot active" style="background-color: #111318;"></span>
+              <span class="swatch-dot" style="background-color: #EAF6FC;"></span>
+            </div>
+            <div class="product-specs">
+              <span class="product-spec-item">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="m5 12 5 5L20 7"/></svg>
+                Puddle-Resistant Membrane
+              </span>
+              <span class="product-spec-item">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="m5 12 5 5L20 7"/></svg>
+                High-Traction Tread
+              </span>
+            </div>
+            <div class="product-footer">
+              <span class="product-price">$145.00</span>
+              <button type="button" class="btn btn-blue btn-sm" onclick="alert('Commuter Sneaker added to your cart!')">Add to Cart</button>
+            </div>
+          </div>
+        </article>
+
+        <!-- ===================================================================
+             PRODUCT 09: LAKEFRONT WEATHERPROOF SLING (Photorealistic)
+             =================================================================== -->
+        <article class="product-card" data-category="backpacks">
+          <div class="product-image-wrap">
+            <span class="product-badge-flag blue">Crossbody</span>
+            <img src="/starter-site/images/products/lakefront_sling.jpg" alt="Lakefront Weatherproof Sling in black canvas" class="product-photo" loading="lazy">
+          </div>
+          <div class="product-body">
+            <div class="product-metadata">
+              <span>Everyday Carry</span>
+              <span class="product-metadata-separator">/</span>
+              <span>6-Liter Volume</span>
+              <span class="product-metadata-separator">/</span>
+              <span>Tablet Padded</span>
+            </div>
+            <h3 class="product-title">
+              <a href="#">Lakefront Weatherproof Sling</a>
+            </h3>
+            <p class="product-desc">
+              Compact technical crossbody bag for iPad, power banks, keys, and gloves. Weatherproof zippers keep your electronics dry during wet commutes.
+            </p>
+            <div class="swatch-group">
+              <span class="swatch-dot active" style="background-color: #111318;"></span>
+              <span class="swatch-dot" style="background-color: #10538D;"></span>
+            </div>
+            <div class="product-specs">
+              <span class="product-spec-item">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="m5 12 5 5L20 7"/></svg>
+                Padded 11" Tablet Pocket
+              </span>
+              <span class="product-spec-item">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="m5 12 5 5L20 7"/></svg>
+                Quick-Release Buckle
+              </span>
+            </div>
+            <div class="product-footer">
+              <span class="product-price">$68.00</span>
+              <button type="button" class="btn btn-black btn-sm" onclick="alert('Lakefront Sling added to your cart!')">Add to Cart</button>
+            </div>
+          </div>
+        </article>
+
+        <!-- ===================================================================
+             PRODUCT 10: TOUCH-GRIP GLOVES & THERMAL BEANIE (Photorealistic)
+             =================================================================== -->
+        <article class="product-card" data-category="socks">
+          <div class="product-image-wrap">
+            <span class="product-badge-flag red">&#9733; Cold Essentials</span>
+            <img src="/starter-site/images/products/beanie_gloves.jpg" alt="Touch-Grip Commuter Gloves and Thermal Beanie in black" class="product-photo" loading="lazy">
+          </div>
+          <div class="product-body">
+            <div class="product-metadata">
+              <span>Winter Essentials</span>
+              <span class="product-metadata-separator">/</span>
+              <span>Touchscreen Pads</span>
+              <span class="product-metadata-separator">/</span>
+              <span>Wind-Block Fleece</span>
+            </div>
+            <h3 class="product-title">
+              <a href="#">Touch-Grip Gloves &amp; Beanie Kit</a>
+            </h3>
+            <p class="product-desc">
+              Conductive fingertips allow seamless smartphone texting at freezing outdoor CTA platforms without exposing skin. Includes fine-gauge ribbed beanie.
+            </p>
+            <div class="swatch-group">
+              <span class="swatch-dot active" style="background-color: #111318;"></span>
+              <span class="swatch-dot" style="background-color: #10538D;"></span>
+            </div>
+            <div class="product-specs">
+              <span class="product-spec-item">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="m5 12 5 5L20 7"/></svg>
+                Touchscreen Fingertips
+              </span>
+              <span class="product-spec-item">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="m5 12 5 5L20 7"/></svg>
+                Wind-Resistant Fleece Lining
+              </span>
+            </div>
+            <div class="product-footer">
+              <span class="product-price">$55.00</span>
+              <button type="button" class="btn btn-primary btn-sm" onclick="alert('Gloves & Beanie Kit added to your cart!')">Add to Cart</button>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <div style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: 1rem;">
+            <img src="/starter-site/images/logo.svg" alt="ChiActive Patch" width="40" height="40">
+            <span style="font-family: var(--font-display); font-size: 1.3rem; font-weight: 900; color: #FFFFFF;">
+              CHI<span style="color: var(--chi-red);">ACTIVE</span>
+            </span>
+          </div>
+          <p class="footer-desc">
+            Commercial-grade outdoor apparel and gear engineered for Chicago college students. All items backed by our Chicago Weather Guarantee.
+          </p>
+        </div>
+
+        <div>
+          <h4 class="footer-col-title">Gear Categories</h4>
+          <ul class="footer-link-list">
+            <li><a href="#clothes">Technical Outerwear &amp; Pants</a></li>
+            <li><a href="#shoes">Winter Traction Footwear</a></li>
+            <li><a href="#backpacks">Campus Roll-Top Backpacks</a></li>
+            <li><a href="#socks">Merino Wool Socks</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-col-title">Campus Hub</h4>
+          <ul class="footer-link-list">
+            <li><a href="/starter-site/index.html#collections">Campus Collections</a></li>
+            <li><a href="/starter-site/test.html">Diagnostics Test Page</a></li>
+            <li><a href="/starter-site/starter-site.zip" download>Download .ZIP Archive</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-col-title">Student Support</h4>
+          <p style="font-size: 0.875rem; color: #8C9CAE; margin-bottom: 0.75rem;">
+            Questions on sizing or university discount codes? Contact our Chicago team.
+          </p>
+          <a href="mailto:campus@chiactive.com" style="color: var(--chi-bright-blue); font-weight: 700; font-size: 0.9375rem;">campus@chiactive.com</a>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>&copy; 2026 ChiActive Apparel Co. Chicago, IL. All rights reserved.</div>
+        <div>
+          <a href="/starter-site/index.html" style="color: inherit;">Back to Homepage &rarr;</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Filter & Swatch Interaction Script -->
+  <script>
+    const filterBtns = document.querySelectorAll('.filter-btn');
+    const cards = document.querySelectorAll('#gear-grid .product-card');
+
+    filterBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        filterBtns.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+
+        const filter = btn.getAttribute('data-filter');
+        cards.forEach(card => {
+          if (filter === 'all' || card.getAttribute('data-category') === filter) {
+            card.style.display = 'flex';
+          } else {
+            card.style.display = 'none';
+          }
+        });
+      });
+    });
+
+    // Check URL Hash for category filtering (e.g. #shoes, #backpacks, #socks, #clothes)
+    window.addEventListener('DOMContentLoaded', () => {
+      const hash = window.location.hash.replace('#', '');
+      if (hash) {
+        const matchingBtn = document.querySelector(`.filter-btn[data-filter="${hash}"]`);
+        if (matchingBtn) {
+          matchingBtn.click();
+        }
+      }
+    });
+
+    // Swatches
+    document.querySelectorAll('.swatch-dot').forEach(dot => {
+      dot.addEventListener('click', () => {
+        const group = dot.closest('.swatch-group');
+        group.querySelectorAll('.swatch-dot').forEach(d => d.classList.remove('active'));
+        dot.classList.add('active');
+      });
+    });
+  </script>
+
+</body>
+</html>
